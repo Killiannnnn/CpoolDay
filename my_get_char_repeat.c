@@ -24,10 +24,3 @@ int my_get_char_repeat(char to_find, const char* to_search) {
     return nb;
 
 }
-
-int main() {
-
-    char *str = "bienvenue à epitech";
-    printf("%d\n", my_get_char_repeat('e', str));
-    return 0;
-}
