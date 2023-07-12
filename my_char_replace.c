@@ -2,18 +2,25 @@
 
 void print_char(char c);
 
-char* my_char_replace(char* origin, char toFind, char toReplace) {
+int my_strlen(char* str) {
 
+    int a = 0;
 
+    while(str[a] != '\0')
+        a++;
+    
+    return a;
 
 }
 
-int main(){
+char* my_char_replace(char* origin, char toFind, char toReplace) {
 
-    
-    char str[] = "bienvenue à epitech !";
-    printf("%s\n", my_char_replace(str, 'e', 'a'));
+    int len = my_strlen(origin);
 
-    return 0;
+    for(int i = 0; i < len; i++)
+        if(origin[i] == toFind)
+            origin[i] = toReplace;
+
+    return origin;
 
 }
