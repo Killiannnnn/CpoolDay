@@ -17,11 +17,17 @@ int my_get_char_repeat(char to_find, const char* to_search) {
 
     int nb = 0;
 
-    if (to_search != NULL)
-        for(int i = 0; i < my_strlen(to_search); i++)
-            if(to_search[i] == to_find)
-                nb++;
+    for(int i = 0; i < my_strlen(to_search); i++)
+        if(to_search[i] == to_find)
+            nb++;
 
     return nb;
 
+}
+
+int main() {
+
+    char *str = "bienvenue à epitech";
+    printf("%d\n", my_get_char_repeat('e', str));
+    return 0;
 }
